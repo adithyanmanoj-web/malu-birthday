@@ -1,242 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Happy Birthday Malu ❤️</title>
-
-    <meta name="description" content="A special birthday surprise made with love for Malu.">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081321">
+  <title>For Malu | 17th Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">M</span><span>FOR MALU</span></a>
+    <span class="top-note">A LITTLE PAGE, WITH A LOT OF LOVE</span>
+  </header>
 
-    <!-- FLOATING DECORATIONS -->
-    <div id="sparkles"></div>
-
-    <!-- WELCOME SECTION -->
-    <section class="welcome-container">
-
-        <div class="welcome-card">
-
-            <div class="top-teddy">🧸</div>
-
-            <p class="small-heading">A LITTLE SURPRISE FOR YOU</p>
-
-            <h1>Happy Birthday</h1>
-
-            <h2 class="name">Malu ❤️</h2>
-
-            <p class="birthday-date">December 04, 2026</p>
-
-            <div class="countdown-box">
-
-                <h3>THE COUNTDOWN BEGINS!</h3>
-
-                <p class="countdown-intro">
-                    Someone very special is turning 17!
-                </p>
-
-                <div class="count-grid">
-
-                    <div class="count-item">
-                        <span id="days">00</span>
-                        <small>Days</small>
-                    </div>
-
-                    <div class="count-item">
-                        <span id="hours">00</span>
-                        <small>Hours</small>
-                    </div>
-
-                    <div class="count-item">
-                        <span id="minutes">00</span>
-                        <small>Minutes</small>
-                    </div>
-
-                    <div class="count-item">
-                        <span id="seconds">00</span>
-                        <small>Seconds</small>
-                    </div>
-
-                </div>
-
-                <p class="countdown-footer">
-                    Counting every moment until your special day! 💗
-                </p>
-
-            </div>
-
-            <button class="surprise-button" onclick="openSurprise()">
-                Open Your Surprise 🎁
-            </button>
-
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> DECEMBER 04, 2026 <span></span></p>
+        <h1>To my<br><em>favourite</em> girl.</h1>
+        <p class="hero-sub">A little celebration of you, the memories we keep, and all the beautiful moments still waiting for us.</p>
+        <a class="gold-button" href="#memories">WANDER THROUGH OUR MEMORIES <span>↘</span></a>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-frame">
+          <img src="images/malu-01.jpg" alt="Malu smiling">
+          <div class="photo-tag">THE ONE AND ONLY · MALU</div>
         </div>
-
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+        <div class="side-caption">SEVENTEEN LOOKS BEAUTIFUL ON YOU</div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
     </section>
 
-
-    <!-- KINDER JOY SURPRISE -->
-    <section class="kinder-section" id="kinderSection">
-
-        <h2>A Little Treat For You 🍫</h2>
-
-        <p>Because I know how much you love Kinder Joy!</p>
-
-        <div class="kinder-egg" id="kinderEgg">
-            🥚
-        </div>
-
-        <button class="surprise-button" onclick="openKinderJoy()">
-            Open Your Kinder Joy 💗
-        </button>
-
-        <div class="kinder-reveal hidden" id="kinderReveal">
-
-            <div class="big-teddy">🧸</div>
-
-            <h2>Surprise, Malu!</h2>
-
-            <p>
-                A little chocolate, a cute teddy,
-                and endless love from your brother! ❤️
-            </p>
-
-            <p class="special-text">
-                You deserve all the happiness in the world!
-            </p>
-
-        </div>
-
+    <section class="count-section">
+      <p class="eyebrow">THE COUNTDOWN TO YOUR DAY</p>
+      <h2>Almost time to celebrate <em>you.</em></h2>
+      <div class="countdown" aria-label="Countdown to December 4, 2026">
+        <div><strong id="days">--</strong><span>DAYS</span></div>
+        <i></i><div><strong id="hours">--</strong><span>HOURS</span></div>
+        <i></i><div><strong id="minutes">--</strong><span>MINUTES</span></div>
+        <i></i><div><strong id="seconds">--</strong><span>SECONDS</span></div>
+      </div>
     </section>
 
-
-    <!-- BIRTHDAY CAKE -->
-    <section class="cake-section" id="cakeSection">
-
-        <h2>A Cake Just For You, Malu! 🎂</h2>
-
-        <p>Make a wish and tap the cake to blow out your candles!</p>
-
-        <div class="birthday-cake" id="birthdayCake">
-
-            <div class="candles">
-
-                <span class="candle">
-                    <span class="flame"></span>
-                </span>
-
-                <span class="candle">
-                    <span class="flame"></span>
-                </span>
-
-                <span class="candle">
-                    <span class="flame"></span>
-                </span>
-
-            </div>
-
-            <div class="cake-top"></div>
-            <div class="cake-middle"></div>
-            <div class="cake-bottom"></div>
-
+    <section class="memories-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">A COLLECTION OF LITTLE FOREVERS</p>
+        <h2>Our favourite <em>frames.</em></h2>
+        <p>Some moments deserve more than a place in the camera roll.</p>
+      </div>
+      <div class="slideshow">
+        <div class="slide-stage">
+          <img id="slideImage" src="images/malu-01.jpg" alt="A memory with Malu">
+          <div class="slide-shade"></div>
+          <div class="slide-counter"><span id="slideNumber">01</span> <i></i> 10</div>
+          <div class="slide-caption"><span>MEMORY NO. <b id="captionNumber">01</b></span><h3 id="slideCaption">A moment to keep.</h3></div>
+          <button class="slide-arrow prev" id="prevSlide" aria-label="Previous photo">‹</button>
+          <button class="slide-arrow next" id="nextSlide" aria-label="Next photo">›</button>
         </div>
-
-        <button class="surprise-button" id="blowButton" onclick="blowCandles()">
-            Make a Wish & Blow! 🌬️
-        </button>
-
-        <p id="wishMessage" class="hidden">
-            Your wishes deserve to come true, Malu! ❤️
-        </p>
-
-    </section>
-
-
-    <!-- MUSIC SECTION -->
-    <section class="music-section">
-
-        <h2>A Melody For You 🎵</h2>
-
-        <button class="music-button" id="musicButton" onclick="toggleMusic()">
-            ▶ Play Birthday Music
-        </button>
-
-        <p>A little melody made just for you 💕</p>
-
-    </section>
-
-
-    <!-- PERSONAL LETTER -->
-    <section class="letter-section" id="letter">
-
-        <div class="letter-card">
-
-            <div class="letter-decoration">💌</div>
-
-            <h2>A Letter For My Little Sister</h2>
-
-            <p>Dear Malu,</p>
-
-            <p>
-                Happy 17th Birthday, my little sister! 🥹
-            </p>
-
-            <p>
-                I may not express my feelings every day,
-                but you mean so much to me. Watching you grow
-                makes me happy, and I wish to see you achieve
-                everything you dream of.
-            </p>
-
-            <p>
-                No matter how old you grow, you'll always
-                be my little girl. ❤️
-            </p>
-
-            <p>
-                Whatever happens... Whoever stands against you...
-                I will always be beside you, my little sister. 🥹
-            </p>
-
-            <p>
-                Keep smiling, keep dreaming, and never stop
-                being the wonderful person you are.
-            </p>
-
-            <p>
-                You will always have me by your side.
-            </p>
-
-            <h3>With lots of love,</h3>
-
-            <h2 class="signature">Your Brother ❤️</h2>
-
+        <div class="slide-controls">
+          <div class="dots" id="slideDots" aria-label="Choose a photo"></div>
+          <button id="playPause" class="play-control" aria-label="Pause slideshow">Ⅱ <span>PAUSE</span></button>
         </div>
-
+      </div>
+      <p class="memory-footnote">TEN LITTLE WINDOWS INTO THE MEMORIES WE SHARE.</p>
     </section>
 
+    <section class="letter-section">
+      <div class="letter-decoration">✳</div>
+      <p class="eyebrow">A NOTE FROM YOUR BIG BROTHER</p>
+      <h2>For my little <em>star.</em></h2>
+      <div class="letter-card">
+        <p class="letter-greeting">Dear Malu,</p>
+        <p>Seventeen already. It feels like time has quietly flown by, but to me, you'll always be that little girl I want to protect, tease, and make smile.</p>
+        <p>No matter how old you grow, you'll always be my little girl. ❤️</p>
+        <p>Whatever happens... whoever stands against you... I will always be beside you, my little sister. 🥹</p>
+        <p>Keep smiling, keep dreaming, and never let the world make you forget how special you are. I hope this new chapter brings you endless happiness, courage, and everything your heart wishes for.</p>
+        <p class="letter-sign">With all my love, <span>Your big brother</span></p>
+      </div>
+    </section>
 
-    <!-- FINAL MESSAGE -->
-    <footer class="final-footer">
+    <section class="final-section">
+      <div class="final-stars">✦　✧　✦</div>
+      <p class="eyebrow">DECEMBER 04, 2026</p>
+      <h2>Happy 17th<br><em>Birthday, Malu.</em></h2>
+      <p>Here's to more laughter, more memories, and a lifetime of knowing I've got your back.</p>
+      <div class="final-heart">♡</div>
+    </section>
+  </main>
 
-        <div>🧸 💗 🎀</div>
-
-        <h2>Happy 17th Birthday, Malu!</h2>
-
-        <p>Made with endless love by your brother ❤️</p>
-
-        <p class="footer-small">
-            You will always be my little sister.
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+  <footer><span>MADE WITH LOVE, JUST FOR MALU</span><span>✦</span><span>ALWAYS YOUR BIG BROTHER</span></footer>
+  <script src="script.js"></script>
 </body>
 </html>
