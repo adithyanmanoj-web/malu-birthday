@@ -1,8 +1,4 @@
 
-// ========================================
-// MALU'S 17TH BIRTHDAY COUNTDOWN
-// ========================================
-
 const birthday = new Date("December 4, 2026 00:00:00").getTime();
 
 function updateCountdown() {
@@ -32,11 +28,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-
-// ========================================
-// MALU'S PHOTO SLIDESHOW
-// ========================================
-
+// Photo slideshow
 const photos = [
   ["malu-01.jpg", "A moment to keep."],
   ["malu-02.jpg", "That beautiful smile."],
@@ -61,23 +53,12 @@ const caption = document.getElementById("slideCaption");
 const dots = document.getElementById("slideDots");
 const playButton = document.getElementById("playPause");
 
-
-// Create slideshow navigation dots
-
 photos.forEach((photo, index) => {
   const dot = document.createElement("button");
-
   dot.setAttribute("aria-label", `Show photo ${index + 1}`);
-
-  dot.addEventListener("click", () => {
-    showSlide(index);
-  });
-
+  dot.addEventListener("click", () => showSlide(index));
   dots.appendChild(dot);
 });
-
-
-// Display selected photo
 
 function showSlide(index) {
   current = (index + photos.length) % photos.length;
@@ -86,14 +67,10 @@ function showSlide(index) {
 
   setTimeout(() => {
     image.src = photos[current][0];
-
     caption.textContent = photos[current][1];
 
-    number.textContent =
-      String(current + 1).padStart(2, "0");
-
-    captionNumber.textContent =
-      String(current + 1).padStart(2, "0");
+    number.textContent = String(current + 1).padStart(2, "0");
+    captionNumber.textContent = String(current + 1).padStart(2, "0");
 
     image.classList.remove("fade");
   }, 180);
@@ -103,39 +80,22 @@ function showSlide(index) {
   });
 }
 
-
-// Next photo
-
 function next() {
   showSlide(current + 1);
 }
 
-
-// Start slideshow
-
 function start() {
   clearInterval(timer);
-
   timer = setInterval(next, 4200);
-
   playing = true;
-
   playButton.innerHTML = 'Ⅱ <span>PAUSE</span>';
 }
 
-
-// Pause slideshow
-
 function pause() {
   clearInterval(timer);
-
   playing = false;
-
   playButton.innerHTML = '▶ <span>PLAY</span>';
 }
-
-
-// Previous and next buttons
 
 document.getElementById("prevSlide").addEventListener("click", () => {
   showSlide(current - 1);
@@ -145,15 +105,9 @@ document.getElementById("nextSlide").addEventListener("click", () => {
   showSlide(current + 1);
 });
 
-
-// Play / Pause button
-
 playButton.addEventListener("click", () => {
   playing ? pause() : start();
 });
-
-
-// Initialize slideshow
 
 showSlide(0);
 start();
