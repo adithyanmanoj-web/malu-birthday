@@ -1,123 +1,239 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Malu ❤️</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081321">
+  <title>For Malu | 17th Birthday</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="grain"></div>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="hero-content">
-            <p class="subtitle">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">M</span>
+      <span>FOR MALU</span>
+    </a>
+    <span class="top-note">A LITTLE PAGE, WITH A LOT OF LOVE</span>
+  </header>
 
-            <h1>Happy Birthday, Malu! ❤️</h1>
+  <main>
 
-            <p class="hero-message">
-                To my little sister, my forever happiness.
-            </p>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span></span> DECEMBER 04, 2026 <span></span>
+        </p>
 
-            <img src="malu-01.jpg" alt="Malu smiling" class="hero-image">
+        <h1>To my<br><em>favourite</em> girl.</h1>
 
-            <h2>December 4, 2026</h2>
-            <p>Another beautiful year of you!</p>
-        </div>
-    </header>
+        <p class="hero-sub">
+          A little celebration of you, the memories we keep,
+          and all the beautiful moments still waiting for us.
+        </p>
 
+        <a class="gold-button" href="#memories">
+          WANDER THROUGH OUR MEMORIES <span>↘</span>
+        </a>
+      </div>
 
-    <!-- COUNTDOWN SECTION -->
-    <section class="countdown-section">
-        <h2>Counting Down to Your Special Day</h2>
-        <div id="countdown">Loading countdown...</div>
-    </section>
-
-
-    <!-- PHOTO GALLERY -->
-    <section class="gallery-section">
-
-        <p class="subtitle">LITTLE MOMENTS, BIG MEMORIES</p>
-
-        <h2>Beautiful Memories 📸</h2>
-
-        <div class="slideshow">
-
-            <img
-                id="slideImage"
-                src="malu-01.jpg"
-                alt="Malu's memory"
-            >
-
-            <div class="slide-controls">
-                <button id="prevBtn" type="button">❮</button>
-
-                <button id="playPauseBtn" type="button">
-                    Pause
-                </button>
-
-                <button id="nextBtn" type="button">❯</button>
-            </div>
-
-            <div id="dots" class="dots"></div>
-
+      <div class="hero-photo-wrap">
+        <div class="hero-frame">
+          <img src="malu-01.jpg" alt="Malu smiling">
+          <div class="photo-tag">THE ONE AND ONLY · MALU</div>
         </div>
 
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+
+        <div class="side-caption">
+          SEVENTEEN LOOKS BEAUTIFUL ON YOU
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-line"></span>
+        <span>01 / 04</span>
+      </div>
     </section>
 
+    <section class="count-section">
+      <p class="eyebrow">THE COUNTDOWN TO YOUR DAY</p>
 
-    <!-- BIRTHDAY LETTER -->
+      <h2>Almost time to celebrate <em>you.</em></h2>
+
+      <div class="countdown" aria-label="Countdown to December 4, 2026">
+        <div>
+          <strong id="days">--</strong>
+          <span>DAYS</span>
+        </div>
+
+        <i></i>
+
+        <div>
+          <strong id="hours">--</strong>
+          <span>HOURS</span>
+        </div>
+
+        <i></i>
+
+        <div>
+          <strong id="minutes">--</strong>
+          <span>MINUTES</span>
+        </div>
+
+        <i></i>
+
+        <div>
+          <strong id="seconds">--</strong>
+          <span>SECONDS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="memories-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">A COLLECTION OF LITTLE FOREVERS</p>
+
+        <h2>Our favourite <em>frames.</em></h2>
+
+        <p>
+          Some moments deserve more than a place in the camera roll.
+        </p>
+      </div>
+
+      <div class="slideshow">
+        <div class="slide-stage">
+
+          <img
+            id="slideImage"
+            src="malu-01.jpg"
+            alt="A memory with Malu"
+          >
+
+          <div class="slide-shade"></div>
+
+          <div class="slide-counter">
+            <span id="slideNumber">01</span>
+            <i></i>
+            10
+          </div>
+
+          <div class="slide-caption">
+            <span>
+              MEMORY NO. <b id="captionNumber">01</b>
+            </span>
+
+            <h3 id="slideCaption">A moment to keep.</h3>
+          </div>
+
+          <button
+            class="slide-arrow prev"
+            id="prevSlide"
+            aria-label="Previous photo"
+          >‹</button>
+
+          <button
+            class="slide-arrow next"
+            id="nextSlide"
+            aria-label="Next photo"
+          >›</button>
+
+        </div>
+
+        <div class="slide-controls">
+          <div class="dots" id="slideDots" aria-label="Choose a photo"></div>
+
+          <button
+            id="playPause"
+            class="play-control"
+            aria-label="Pause slideshow"
+          >
+            Ⅱ <span>PAUSE</span>
+          </button>
+        </div>
+      </div>
+
+      <p class="memory-footnote">
+        TEN LITTLE WINDOWS INTO THE MEMORIES WE SHARE.
+      </p>
+    </section>
+
     <section class="letter-section">
+      <div class="letter-decoration">✳</div>
 
-        <p class="subtitle">FROM YOUR BROTHER</p>
+      <p class="eyebrow">A NOTE FROM YOUR BIG BROTHER</p>
 
-        <h2>A Little Message for You 💌</h2>
+      <h2>For my little <em>star.</em></h2>
 
-        <div class="letter">
+      <div class="letter-card">
 
-            <p>Dear Malu,</p>
+        <p class="letter-greeting">Dear Malu,</p>
 
-            <p>
-                Happy Birthday to my little sister! ❤️
-                I may not say it every day, but you mean so much to me.
-                Seeing you grow up makes me happy and proud.
-            </p>
+        <p>
+          Seventeen already. It feels like time has quietly flown by,
+          but to me, you'll always be that little girl I want to protect,
+          tease, and make smile.
+        </p>
 
-            <p>
-                Keep smiling, keep dreaming, and never stop being yourself.
-                Life may bring different challenges, but always remember
-                that you are stronger than you think.
-            </p>
+        <p>
+          No matter how old you grow, you'll always be my little girl. ❤️
+        </p>
 
-            <p>
-                No matter how old you grow, you'll always be my little girl. ❤️
-            </p>
+        <p>
+          Whatever happens... whoever stands against you...
+          I will always be beside you, my little sister. 🥹
+        </p>
 
-            <p>
-                Whatever happens... whoever stands against you...
-                I will always be beside you, my little sister. 🥹
-            </p>
+        <p>
+          Keep smiling, keep dreaming, and never let the world make you
+          forget how special you are. I hope this new chapter brings you
+          endless happiness, courage, and everything your heart wishes for.
+        </p>
 
-            <p>With lots of love,</p>
+        <p class="letter-sign">
+          With all my love,
+          <span>Your big brother</span>
+        </p>
 
-            <h3>Your Brother ❤️</h3>
-
-        </div>
-
+      </div>
     </section>
 
+    <section class="final-section">
+      <div class="final-stars">✦　✧　✦</div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Made with ❤️ especially for Malu</p>
-        <p>December 4, 2026</p>
-    </footer>
+      <p class="eyebrow">DECEMBER 04, 2026</p>
 
+      <h2>
+        Happy 17th<br>
+        <em>Birthday, Malu.</em>
+      </h2>
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+      <p>
+        Here's to more laughter, more memories,
+        and a lifetime of knowing I've got your back.
+      </p>
 
+      <div class="final-heart">♡</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>MADE WITH LOVE, JUST FOR MALU</span>
+    <span>✦</span>
+    <span>ALWAYS YOUR BIG BROTHER</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
