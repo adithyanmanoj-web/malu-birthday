@@ -7,10 +7,8 @@
     <title>Happy Birthday Malu ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HERO SECTION -->
     <header class="hero">
         <div class="hero-content">
             <p class="subtitle">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
@@ -18,39 +16,40 @@
             <p class="hero-message">
                 To my little sister, my forever happiness.
             </p>
-
             <img src="malu-01.jpg" alt="Malu smiling" class="hero-image">
-
             <h2>December 4, 2026</h2>
             <p>Another beautiful year of you!</p>
         </div>
     </header>
 
-    <!-- COUNTDOWN -->
     <section class="countdown-section">
         <h2>Counting Down to Your Special Day</h2>
         <div id="countdown">Loading countdown...</div>
     </section>
 
-    <!-- MUSIC SECTION -->
+    <!-- MUSIC -->
     <section class="music-section">
         <p>A LITTLE MUSIC FOR YOU ❤️</p>
-        <h2>Magale</h2>
-        <p>A song to make your special day even more beautiful.</p>
+        <h2>Magale 🎵</h2>
+        <p>A special song for a special girl.</p>
+
+        <button id="musicButton" type="button">
+            ❤️ Turn On Music
+        </button>
 
         <iframe
+            id="birthdaySong"
             width="320"
             height="180"
-            src="https://www.youtube.com/embed/FhhA5purigQ"
-            title="Magale by Sai Abhyankkar"
-            frameborder="0"
-            allow="encrypted-media; picture-in-picture"
-            referrerpolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/FhhA5purigQ?enablejsapi=1&playsinline=1"
+            title="Magale - Sai Abhyankkar"
+            allow="autoplay; encrypted-media; picture-in-picture"
             allowfullscreen>
         </iframe>
+
+        <p>Tap the button to start your birthday song!</p>
     </section>
 
-    <!-- PHOTO GALLERY -->
     <section class="gallery-section">
         <p class="subtitle">LITTLE MOMENTS, BIG MEMORIES</p>
         <h2>Beautiful Memories 📸</h2>
@@ -68,7 +67,6 @@
         </div>
     </section>
 
-    <!-- LETTER SECTION -->
     <section class="letter-section">
         <p class="subtitle">FROM YOUR BROTHER</p>
         <h2>A Little Message for You 💌</h2>
@@ -102,11 +100,21 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>Made with ❤️ especially for Malu</p>
         <p>December 4, 2026</p>
     </footer>
+
+    <script>
+        const musicButton = document.getElementById("musicButton");
+        const birthdaySong = document.getElementById("birthdaySong");
+
+        musicButton.addEventListener("click", function () {
+            birthdaySong.src =
+                "https://www.youtube.com/embed/FhhA5purigQ?autoplay=1&playsinline=1";
+            musicButton.textContent = "🎵 Enjoy the Music!";
+        });
+    </script>
 
     <script src="script.js"></script>
 
